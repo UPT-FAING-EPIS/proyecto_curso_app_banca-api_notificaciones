@@ -16,17 +16,16 @@ Flight::route('POST /Cnotfound', function () {
     $datos=$sentencia->fetchAll();
     if((count($datos)!=0) && ($tipo_msg=="SF"))
     {
-        $id=$datos[0];
-        $sql="INSERT INTO tbregistro (idcliente,fecha,tipo) VALUES('$id',NOW(),'$tipo_msg')";
+        $sql="INSERT INTO tbregistro (idcliente,fecha,tipo) VALUES('$buscar',NOW(),'$tipo_msg')";
         $sentencia1=Flight::db()->prepare($sql);
         $sentencia1->execute();
         
     }
     else if((count($datos)!=0) && ($tipo_msg=="RF"))
     {
-        $id=$datos[0];
-        $tipo_msg2="Retiro de Fondos";
-        Flight::json($id);
+        $sql="INSERT INTO tbregistro (idcliente,fecha,tipo) VALUES('$buscar',NOW(),'$tipo_msg')";
+        $sentencia1=Flight::db()->prepare($sql);
+        $sentencia1->execute();
     }
     else
     {
