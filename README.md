@@ -1,4 +1,3 @@
-DESCARGAR LO SIGUIENTE (VISUAL STUDIO CODE)
-- Descargar Thunder Client como ayuda para el GET y POST 
-BUSCAR EN EL EXPLORADOR E INSTALAR
+DESCARGAR LO SIGUIENTE
+- Descargar Thunder Client como ayuda para el GET y POST (visual studio code)
 - flightphp https://flightphp.com/
