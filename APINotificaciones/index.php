@@ -2,12 +2,21 @@
 
 require 'flight/Flight.php';
 
-Flight::route('/cnotfound', function () {
-    echo 'Cliente no encontrado';
+Flight::route('GET /Cnotfound', function () {
+    Flight::json("Cliente no encontrado");
 });
 
-Flight::route('/deposito', function () {
-    echo 'Usted a depositado';
+Flight::route('POST /Cnotfound', function () {
+    $Cnotfound=(Flight::request()->data->Cnotfound);
+
+    if($Cnotfound=="CNF")
+    {
+        Flight::json("Cliente no encontrado");
+    }
+    else
+    {
+        Flight::json("ERROR");
+    }
 });
 
 Flight::start();
